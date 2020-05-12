@@ -23,8 +23,8 @@ public class SceneViewActivity extends AppCompatActivity {
   private void setupMapSceneView() {
       if (mSceneView != null) {
       ArcGISRuntimeEnvironment.setLicense(getResources().getString(R.string.arcgis_license_key));
-      double latitude = 33.8610;
-      double longitude = -118.8080;
+        double latitude = 34.0270;
+        double longitude = -118.8050;
       double altitude = 25000.0;
       double heading = 0.1;
       double pitch = 45.0;

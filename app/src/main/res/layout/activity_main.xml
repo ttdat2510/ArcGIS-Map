@@ -26,17 +26,23 @@
       android:layout_height="wrap_content"
       android:text="SceneView" />
 
-<!--    <Button-->
-<!--      android:id="@+id/buttonMapBasic"-->
-<!--      android:layout_width="match_parent"-->
-<!--      android:layout_height="wrap_content"-->
-<!--      android:text="Map basic" />-->
+    <Button
+      android:id="@+id/buttonTrailheadsLayer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="TrailheadsLayer" />
 
-<!--    <Button-->
-<!--      android:id="@+id/buttonMapBasic"-->
-<!--      android:layout_width="match_parent"-->
-<!--      android:layout_height="wrap_content"-->
-<!--      android:text="Map basic" />-->
+    <Button
+      android:id="@+id/buttonLayerFromAnItem"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Layer From An Item" />
+    <Button
+      android:id="@+id/buttonRoute"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Route Map" />
+
   </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

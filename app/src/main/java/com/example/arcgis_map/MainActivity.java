@@ -9,8 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-  private Button buttonMapBasic;
-  private Button buttonSceneView;
+  private Button buttonMapBasic, buttonRoute, buttonSceneView, buttonTrailheadsLayer, buttonLayerFromAnItem;
+
+
   private Context context;
 
   @Override
@@ -35,11 +36,35 @@ public class MainActivity extends AppCompatActivity {
         SceneViewActivity.start(context);
       }
     });
+
+    buttonTrailheadsLayer.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        TrailheadsLayer.start(context);
+      }
+    });
+
+    buttonLayerFromAnItem.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        AddLayerFromAnItem.start(context);
+      }
+    });
+
+    buttonRoute.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        RouteActivity.start(context);
+      }
+    });
   }
 
   private void init() {
     context = this;
     buttonMapBasic = findViewById(R.id.buttonMapBasic);
     buttonSceneView = findViewById(R.id.buttonSceneView);
+    buttonTrailheadsLayer = findViewById(R.id.buttonTrailheadsLayer);
+    buttonLayerFromAnItem = findViewById(R.id.buttonLayerFromAnItem);
+    buttonRoute = findViewById(R.id.buttonRoute);
   }
 }

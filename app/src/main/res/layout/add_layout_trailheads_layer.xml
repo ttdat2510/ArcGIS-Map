@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
         /* Copyright 2018 Esri
         *
@@ -14,9 +15,17 @@
         * limitations under the License.
         *
         */
---><resources>
-  <string name="app_name">ArcGIS Online</string>
-  <string name="Trailheads_Styled_Layer">2e4b3df6ba4b44969a3bc9827de746b3</string>
-  <string name="Trails_Styled_Layer">6b8ca89d2bd2418f8b91b030f9832ab8</string>
-  <string name="Parks_And_Open_Space_Layer">fbca9c87feb94ba5b00411b3a00809f3</string>
-  </resources>
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/activity_main"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".AddLayerFromAnItem">
+
+  <com.esri.arcgisruntime.mapping.view.MapView
+    android:id="@+id/mapView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+  </com.esri.arcgisruntime.mapping.view.MapView>
+</RelativeLayout>

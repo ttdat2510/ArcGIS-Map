@@ -2,4 +2,7 @@
 <resources>
   <!-- *** ADD *** -->
   <string name="arcgis_license_key">YOUR_LICENSE_KEY</string>
+  <string name="client_id">YOUR_CLIENT_ID</string>
+  <string name="redirect_uri">my-app://auth</string>
+  <string name="routing_url">https://route.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World</string>
 </resources>

@@ -7,18 +7,29 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.esri.arcgisruntime.ArcGISRuntimeEnvironment;
+import com.esri.arcgisruntime.data.ServiceFeatureTable;
+import com.esri.arcgisruntime.layers.FeatureLayer;
 import com.esri.arcgisruntime.mapping.ArcGISMap;
 import com.esri.arcgisruntime.mapping.Basemap;
 import com.esri.arcgisruntime.mapping.view.MapView;
+import com.esri.arcgisruntime.mapping.view.SceneView;
 
-public class MapBasic extends AppCompatActivity {
-  // Private constructor to avoid client applications to use constructor
+public class TrailheadsLayer extends AppCompatActivity {
   public static void start(Context context) {
-      Intent starter = new Intent(context, MapBasic.class);
-      context.startActivity(starter);
+    Intent starter = new Intent(context, TrailheadsLayer.class);
+    context.startActivity(starter);
   }
 
   private MapView mMapView;
+
+
+  private void addTrailheadsLayer() {
+    String url = "https://sampleserver6.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer";
+    ServiceFeatureTable serviceFeatureTable = new ServiceFeatureTable(url);
+    FeatureLayer featureLayer = new FeatureLayer(serviceFeatureTable);
+    ArcGISMap map = mMapView.getMap();
+    map.getOperationalLayers().add(featureLayer);
+  }
 
   private void setupMap() {
     if (mMapView != null) {
@@ -33,13 +44,15 @@ public class MapBasic extends AppCompatActivity {
     }
   }
 
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_map_view_basic);
-    // *** ADD ***
+    setContentView(R.layout.activity_trailheads_layer);
     mMapView = findViewById(R.id.mapView);
     setupMap();
+    // *** ADD ***
+    addTrailheadsLayer();
   }
 
   @Override
