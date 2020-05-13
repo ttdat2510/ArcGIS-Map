@@ -6,6 +6,7 @@
   <string name="redirect_uri">my-app://auth</string>
   <string name="routing_url">https://route.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World</string>
 </resources>
-
-<!--  http://sampleserver6.arcgisonline.com/arcgis/rest/services/NetworkAnalysis/SanDiego/NAServer/Route-->
-<!--  https://sampleserver6.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer-->
+  <!--   Dashboard :https://developers.arcgis.com/dashboard
+   step 1: create app
+  step 2: add  client ID
+  /-->
