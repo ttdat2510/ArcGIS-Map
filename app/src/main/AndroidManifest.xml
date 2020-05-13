@@ -30,6 +30,8 @@
     <activity android:name=".MapBasic" />
     <activity android:name=".TrailheadsLayer" />
     <activity android:name=".AddLayerFromAnItem" />
+    <activity android:name=".DisplayLinePointActivity" />
+
     <activity
       android:name=".RouteActivity"
       android:label="OAuthIntentReceiver"

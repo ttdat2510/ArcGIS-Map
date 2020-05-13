@@ -43,6 +43,12 @@
       android:layout_height="wrap_content"
       android:text="Route Map" />
 
+    <Button
+      android:id="@+id/buttonDisplayLinePoint"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Display Line Point" />
+
   </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

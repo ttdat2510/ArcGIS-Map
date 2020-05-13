@@ -9,7 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-  private Button buttonMapBasic, buttonRoute, buttonSceneView, buttonTrailheadsLayer, buttonLayerFromAnItem;
+  private Button buttonMapBasic, buttonRoute, buttonSceneView, buttonTrailheadsLayer, buttonLayerFromAnItem,
+      buttonDisplayLinePoint;
 
 
   private Context context;
@@ -57,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
         RouteActivity.start(context);
       }
     });
+
+    buttonDisplayLinePoint.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        DisplayLinePointActivity.start(context);
+      }
+    });
   }
 
   private void init() {
@@ -66,5 +74,6 @@ public class MainActivity extends AppCompatActivity {
     buttonTrailheadsLayer = findViewById(R.id.buttonTrailheadsLayer);
     buttonLayerFromAnItem = findViewById(R.id.buttonLayerFromAnItem);
     buttonRoute = findViewById(R.id.buttonRoute);
+    buttonDisplayLinePoint= findViewById(R.id.buttonDisplayLinePoint);
   }
 }
