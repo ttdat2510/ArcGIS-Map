@@ -115,9 +115,9 @@ public class DisplayLinePointActivity extends AppCompatActivity {
 
   private void createGraphics() {
     createGraphicsOverlay();
-    createPointGraphics();
+//    createPointGraphics();
     createPolylineGraphics();
-    createPolygonGraphics();
+//    createPolygonGraphics();
   }
 
   @Override

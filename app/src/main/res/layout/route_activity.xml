@@ -4,7 +4,7 @@
   android:id="@+id/activity_main"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".RouteActivity">
+  tools:context="com.example.arcgis_map.RouteActivity">
 
   <com.esri.arcgisruntime.mapping.view.MapView
     android:id="@+id/mapView"

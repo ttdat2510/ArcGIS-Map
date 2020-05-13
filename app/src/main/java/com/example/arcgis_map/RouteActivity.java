@@ -36,27 +36,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+
+
 public class RouteActivity extends AppCompatActivity {
   public static void start(Context context) {
-    Intent starter = new Intent(context, RouteActivity.class);
-    context.startActivity(starter);
+      Intent starter = new Intent(context, RouteActivity.class);
+      context.startActivity(starter);
   }
 
-  private static final String TAG = "RouteActivity";
   private MapView mMapView;
   private GraphicsOverlay mGraphicsOverlay;
   private Point mStart;
   private Point mEnd;
-
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.route_activity);
-    mMapView = findViewById(R.id.mapView);
-    setupMap();
-    createGraphicsOverlay();
-    setupOAuthManager();
-  }
 
   private void createGraphicsOverlay() {
     mGraphicsOverlay = new GraphicsOverlay();
@@ -74,7 +65,7 @@ public class RouteActivity extends AppCompatActivity {
 
   private void setStartMarker(Point location) {
     mGraphicsOverlay.getGraphics().clear();
-    setMapMarker(location, SimpleMarkerSymbol.Style.DIAMOND, Color.rgb(255, 10, 14), Color.BLUE);
+    setMapMarker(location, SimpleMarkerSymbol.Style.DIAMOND, Color.rgb(226, 119, 40), Color.BLUE);
     mStart = location;
     mEnd = null;
   }
@@ -152,8 +143,7 @@ public class RouteActivity extends AppCompatActivity {
       mMapView.setMap(map);
 
       mMapView.setOnTouchListener(new DefaultMapViewOnTouchListener(this, mMapView) {
-        @Override
-        public boolean onSingleTapConfirmed(MotionEvent e) {
+        @Override public boolean onSingleTapConfirmed(MotionEvent e) {
           android.graphics.Point screenPoint = new android.graphics.Point(
               Math.round(e.getX()),
               Math.round(e.getY()));
@@ -179,6 +169,15 @@ public class RouteActivity extends AppCompatActivity {
     }
   }
 
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.route_activity);
+    mMapView = findViewById(R.id.mapView);
+    setupMap();
+    createGraphicsOverlay();
+    setupOAuthManager();
+  }
 
   @Override
   protected void onPause() {
